@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8" />
+		<title>test</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/index.css" />
+
+		<script type="text/javascript" src="js/jq-3.2.1.min.js"></script>
+		<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<nav class="navbar navbar-inverse navbar-fixed-top">
+				<div class="container">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"></button>
+						<a class="navbar-brand" href="#">{{test}}</a>
+					</div>
+				</div>
+			</nav>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-xs-2 col-md-2 leftNav">
+						<ul class="list-group">
+							<li class="list-group-item" v-for="item in otherNameArray">{{item}}</li>
+						</ul>
+					</div>
+					<div class="col-xs-10 col-md-10 rightContent">
+						<div class="jumbotron">
+							<ul class="list-group">
+								<li class="list-group-item" v-for="item in messageLog">
+									<span>{{item.name + ":"}}</span>
+									<span>{{item.message}}</span>
+								</li>
+							</ul>
+						</div>
+						<div class="rightInput">
+							<input @keypress="websocketsend($event)" class="input-group" type="text" name="" id="" value="" v-model="importString"/>
+						</div>
+						<button type="button" class="btn btn-ms btn-success" @click="websocketsend">Send</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/index.js"></script>
+	</body>
+</html>

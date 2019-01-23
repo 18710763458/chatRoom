@@ -1,0 +1,50 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+html,body,#app{
+	height: 100%;
+	width: 100%;
+	font-size: 14px;
+}
+.container-fluid{
+	padding-top:  50px;
+	height: 100%;
+}
+.row{
+	height: 100%;
+}
+.leftNav{
+	padding: 0;
+	height: 100%;
+	border: 1px solid #eee;
+}
+.rightContent{
+	height: 100%;
+	padding: 0;
+	border: 1px solid #eee;
+}
+.container-fluid .jumbotron{
+	height: 80%;
+	border-radius: 0;
+	margin: 0;
+	padding: 0;
+}
+.container-fluid .rightInput{
+	height: 15%;
+}
+.input-group{
+	width: 100%;
+	height: 100%;
+}
+.btn-success{
+	float: right;
+	margin: 5px 20px 0 0;
+}
+.rightContent .list-group{
+	margin: 0;
+}
+.rightContent .list-group-item{
+	background: none;
+	border: none;
+}
